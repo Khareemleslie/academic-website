@@ -12,7 +12,7 @@ pygmentsCodefencesGuessSyntax: yes
 markup:
   goldmark:
     renderer:
-      unsafe: yes
+      unsafe: true
 taxonomies:
   category: categories
   series: series

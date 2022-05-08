@@ -1,0 +1,170 @@
+---
+title: "Final Project - Evaluation Research"
+author: "Khareem Leslie"
+date: 2022-01-05
+categories: ["R"]
+tags: ["R Markdown", "plot", "regression"]
+---
+
+```{r setup, include = FALSE}
+knitr::opts_chunk$set(echo = TRUE, fig.path = "static")
+
+library(tidyverse)
+library(broom)
+library(modelsummary)
+library(estimatr)
+
+set.seed(1234)
+```
+
+------------------------------------------------------------------------
+
+# Introduction
+
+Education plays an important role in society. At the primary level, it establishes the foundations of numbers and language. This later evolves into students being able to do the math, read, and write. This foundation then sets the stage for students to begin and work on more advanced topics at the later primary and secondary levels. Students begin to decide what they want to do once they graduate from high school throughout secondary schooling. The decisions that they make influence society. These students feed into the labor market in different industries based on their careers. Providing students with the ability to attend college at a low cost and helping them to get out of college earlier can make a difference in society. This can help fill gaps in industries that have a demand for labor, at the same time, allow for people to increase their wages. Helping the younger generation achieve their goals can lead us to a better society.
+
+# Program Overview
+
+The Move-On-When-Ready (MOWR) Program was established in 2015 after the passing of Senate Bill Number 2. Before 2015, a similar program was being practiced throughout the state. The program was previously known as dual enrollment. This program aims to allow students to gain college credits toward a degree. At the same time, students can also earn high school credits for every completed college credit taken. This program is highly beneficial as there is no economic effect on students. The cost for students - tuition, mandatory fees, and textbooks - are entirely covered by the program.
+
+The main goal of the MOWR Program was to have three different outcomes: decrease the number of funding sources, set only one eligibility requirement and regulation, and address college completion rates. The primary concern for this program was addressing the college completion rates. With college completion being a measurement for educational institutions, increasing the college completion rates signals an institution as reputable. By decreasing the amount of time, it takes for a student to graduate from college, the hope is to increase the college completion rates. This program addresses this by allowing students to take college credits earlier, leading to earlier graduation. The second issue addressed was the number of funding sources for funding. Being able to fund the program from one source makes it easier for money to go to where it is needed. This decreases the amount of time required to transfer money and the number of people needed for the process. Lastly, the MOWR Program now sets the eligibility requirements for the program. Before the MOWR Program, high schools set the requirements under dual enrollment. This made it more equitable. For example, this removed the condition that if a student was at one school, they might qualify for the program, but at another, they did not.
+
+The program focuses on addressing the education and skills needed for Georgia's Workforce. Investing in students makes them more likely to graduate from colleges and universities. At the same time, it builds the confidence that is needed when transitioning from high school to college. The program research shows that students who have more confidence are less likely to reconsider college compared to those who haven't yet taken college courses.
+
+# Program Theory and Implementation
+
+## Program Theory and Impact Theory Graph
+
+Investing in our students in developing our workforce will make Georgia a stronger state. We can make the state stronger by continuously training and educating current and future people who plan on joining the workforce. Workforce development can be accomplished in several ways. One of the ways that this can be done is through the MOWR program. Since the MOWR program places students at a University System of Georgia (USG) institution or a Technical College System of Georgia (TCSG) school, this can upskill students differently. Each of these systems has different effects on the labor forces of the degrees and courses available to students.
+
+The University System of Georgia (USG) includes the 26 Public Institutions throughout Georgia. Some of the intuitions included in the system include Georgia State University, the Georgia Institute of Technology, and the University of Georgia. Many of the institutions in this category focus on awarding four-year degrees; however, some colleges offer master and doctorate degrees. It is beneficial if students attend this type of college if they plan on working in a job that requires a four-year degree. This helps students build the confidence needed to navigate an institution that offers a four-year degree.
+
+The Technical College System of Georgia (TCSG) consists of the public technical colleges across the state. There are numerous amounts across the state of Georgia that offer different focuses. For example, the Georgia Film Academy. The Georgia Film Academy is a TCSG institution that focuses on educating students in film production to address the demand of the growing film industry in Georgia. In addition, other institutions like the Atlanta Technical College and Southern Crescent Technical College give students the ability to be trained in Cosmetology, Plumbing, and Car Repairs. If students plan on working in an industry, it is beneficial for them to attend a TCSG institution. The normal degrees that are awarded are associate degrees or certifications.
+
+With Georgia having the ability to remove the financial burden of attending a USG or TCSG institution, they hope that students will participate in this program. With programs costing thousands of dollars, the cost of attending universities and colleges can dissuade a student from attending. Between the combination of MOWR and the HOPE scholarship, addressing the financial burden is important to impacting the workforce through this program.
+
+![Figure 1. Impact Theory](/images/Impact Theory.png)
+
+
+
+
+## Logic Model
+
+For the MOWR Program, the main inputs for the program are the taxpayer money and the Staff Members. The taxpayer's money goes towards funding the MOWR Program. Staff Members are needed for the day-to-day administrative aspects of the program. They oversee making sure that the program is efficient.
+
+The activities needed for this program to work are to make sure that students enroll in college courses and receive high school and college credits that count towards both high school and college degrees. This is important as there may be some classes that won't count towards specific high school credit. The next activity that will be done is for High School Counselors. The counselors are responsible for helping students take the required test to apply to the colleges in the program.
+
+Measuring the outputs is the percentage of students that attend dual enrollment programs at a USG or TCSG institution. Measuring this makes it possible to see whether the program is effective. Another way of measuring the output is by looking at whether students are graduating earlier. This then feeds into the outcomes of Georgia. The outcome that the program cares about is the number of skilled workers in Georgia. In addition, the college completion rate of college increased amounts the state of Georgia is another outcome that the program hopes to achieve. Figure 2 provides a diagram of how everything is connected to everything.
+
+![Figure 2. Logic Model](/images/Logic Model.png)
+
+# Outcome and Causation
+
+## Main Outcome
+
+The program that I plan on utilizing for this program outcome is the college completion rate. The college completion rate should be measured since this is the focus of the program. However, it is not easy to figure out whether the program would best help policymakers know whether they should continue to fund the program.
+
+## Measurement
+
+Based on the main outcome of this program focusing on college completion rates, three attributes can be used to decide whether the program works. The three attributes are the number of college classes taken, high-school to college classes, and accessibility to resources to participate in the program. Below, you can find the attributes and a description of how it is defined, an ideal measurement, a feasible measurement, and the measurement of program effects.
+
+### Attribute 1: College Classes Taken
+
+-   Measurable Definition: This is the classes taken by a student before graduating.
+
+-   Ideal Measurement: The number of credit hours of classes taken on semester basis by a student in the program.
+
+-   Feasible Measurement: Though it would be nice to track the ideal data, I feel that just looking at the number of credit hours of classes taken WHILE apart of the program would be sufficient.
+
+-   Measurement of program effect: What we would hope to see is that students who are apart of the program would be graduating faster and at a higher rate since it is less time for them in primarily a higher education institution.
+
+### Attribute 2: High-School to College Classes:
+
+-   Measurable Definition: Classes that count towards both high school and college credits.
+
+-   Ideal Measurement: The number of one-to-one classes offered to a student that is able to be taken during a semester.
+
+-   Feasible Measurement: I believe that the ideal measurement is feasible; however, the classes offer may vary from semester-to-semester. I think a way of making it feasible is by looking at only the one-to-one classes offered year round.
+
+-   Measurement of program effect: What we hope to see is that students who are able to take classes that are offered on semester-to-semester basis that are one-to-one can take more classes which helps them complete college earlier.
+
+### Attribute 3: Accessibility to Resources to Participate in Program
+
+-   Measurable Definition: Resources available to students that enables them to participate in the program.
+
+-   Ideal Measurement: Would be an accurate composite score from 1 to 5 based on factors such as location from high school to college or university, guidance counselors, and SAT/ACT Preparation.
+
+-   Feasible Measurement: Developing a measurement that is accurate would be difficult to obtain and use for the school. One thing that can be used is whether students have access to reliable transportation to get to the program (binary measurement).
+
+-   Measurement of Program Effect: We would hope to see students who have access to transportation would be able to participate in the program and then be able to take college credits.
+
+## Causal Theory
+
+The MOWR Program makes a causal claim that the program will cause students to graduate from college at a higher rate. To measure whether or not this is true, measurement is needed to see if students who participate graduate at higher rates sooner. A measurement that will be used is the number of college classes taken by high school students. The reasoning behind using this is that students who have more college credits will have to take fewer courses once they enroll in a higher education institution. There are three ways in which outside factors can influence the analysis of our program. The first is a school drive. School drive creates a backdoor since students who have more likeness to school will participate in activities that push them forward. In addition, school drive can lead students to do their best academically, which leads to college completion. The second backdoor created is the socioeconomics background. We would probably see that students from socioeconomic backgrounds have higher graduation rates and participate in programs that prepare them for college. Lastly, we have an effect of the MOWR Program Marketing. This only directly impacts whether people know about the program. If they see the program, they will be more willing to participate. To remove the confounding effects, we must control for school drive and socioeconomic backgrounds. Figure 3 shows a diagram of what our DAG looks like.
+
+![Figure 3. DAG](/images/DAG.png)
+
+## Hypotheses
+
+Based on the purpose of the MOWR, we should see that there is a positive effect on the college completion rates. That is, the MOWR program will reduce the amount of time it takes to graduate from college. We should see that students who participate graduate sooner than four on average compared to students who weren't a part of the MOWR Program.
+
+# Data and Methods
+
+## Identification Strategy
+
+To measure the effectiveness of the Move-On When Ready Program, an Instrumental Variable will be used. The Instrumental Variable (IV) will be whether students received encouragement from their high school teacher to enroll in the program. The instrumental variable must pass the three assumptions required. The first assumption is that the IV has to be correlated with the program. In this case, we should expect students who receive encouragement from the high school teacher to enroll in the program. This passes the first assumption. The second assumption is that encouragement isn't correlated with the number of college credits a student will be taken. This IV should pass this test since the encouragement doesn't allow individuals to gain college credit. The only way for the student to get college credit is by taking college courses. Lastly, the third assumption is that there is no other influence on the randomized promotion. Since the promotion is randomly done, no other influence allows the IV to be used. The causal effect of our program is isolated since it removes the endogenous portions of the effect leaving only the effect caused by the IV.
+
+In terms of Internal Validity, the IV is mostly good against most internal validity. For example, the IV accounts for selection bias since teachers talking about the MOWR program would be random. Measurement Error can be something that may be present in our example. Measuring the time taken to complete a college degree can be difficult. For example, someone may get sick and must take a break from school to focus on their health. This adds to the amount of time it takes for them to graduate. Also, say a person doesn't return to school after becoming sick. This leads to attrition issues. A source of external validity is that using randomized promotion is a form of Local Average Treatment Effect and doesn't apply to everyone. This can create a limit on how well the program can scale.
+
+## Data
+
+The information needed to test our program requires information from the Georgia Department of Education. To perform our analysis, we need to know whether a student was encouraged by a teacher or counselor to participate in the MOWR program. We would also need to see if they participated in the MOWR program. Information about how many college credits a student has taken while in high school is required since that is the outcome we plan to utilize for the analysis. The college credit would serve as a proxy to indicate if the person graduates from college more quickly or not compared to people who weren't a part of the program.
+
+# Synthetic Analysis
+
+```{r}
+n_student <- 23203
+
+MOWR_Program_draft <- tibble(
+  student_id = 1:n_student,
+  school_id = sample(1:24, n_student, replace = TRUE),
+  MOWR = sample(c(TRUE, FALSE), n_student, replace = TRUE, prob = c(0.3, 0.7)),
+  Promotion = sample(c(TRUE, FALSE), n_student, replace = TRUE),
+  College_Credits_Pre = ifelse(MOWR == TRUE, round(rnorm(n_student, mean = 10, sd = 3)), 0),
+  College_Credits = College_Credits_Pre * sample(c(3, 4), n_student, 
+                                                 replace = TRUE, prob = c(0.6, 0.4))
+)
+
+MOWR_Program <- MOWR_Program_draft %>% 
+  select(-College_Credits_Pre)
+
+write_csv(MOWR_Program, "MOWR Program.csv")
+
+first_stage <- lm(MOWR ~ Promotion, data = MOWR_Program)
+
+
+MOWR_Program <- MOWR_Program %>% 
+  mutate(Predicted = predict(first_stage))
+
+second_stage <- lm(College_Credits ~ Predicted, data = MOWR_Program)
+
+
+twoSLS <- iv_robust(College_Credits ~ MOWR | Promotion, data = MOWR_Program)
+
+
+model_2sls_w_schoolControl <- iv_robust(College_Credits ~ MOWR + school_id| Promotion + school_id, data = MOWR_Program)
+
+modelsummary(list("Manual Results" = second_stage, "2SLS (automatic)" = twoSLS, "2SLS (automatic) w/ School Control" = 
+                    model_2sls_w_schoolControl), 
+             gof_omit = "IC|Log|Adj|p\\.value|statistic|se_type",
+             stars = TRUE, title = "Model Summaries")
+
+
+
+```
+
+In table 1, three models are run to look at the effect of the MOWR Program on the amount of College Credits a student takes. The college credits were used as a proxy for completing college sooner than their peers who didn't participate in the program. In the first model, we ran a two-stage least square model manually. The results show that the MOWR has a 19.584 increase in college credit a student takes while in high school. The results aren't statistically significant, as the p-value is 0.786. In the second model, we have an identical effect on the program. The second model was run using an automatic process. The results show that the MOWR has a 19.584 increase in college credit a student takes while in high school. Lastly, a control variable - School ID - was used in the model to control for location. After controlling for location, we see that the MOWR program has a 19.609 increase in the number of college credits that a student takes while in college. The results of this model aren't statistically significant.
+
+# Conclusion
+
+After completing an analysis of the MOWR program, we see that this program has no statistical effect on the number of college credits that a student takes. Though our results show no effect, that doesn't necessarily mean that an effect isn't present using other data. It only means that with the data provided, we see no effect. To best confirm this result, we can try utilizing another sample of students and schools to see whether there is truly no effect. Since this is an analysis of a sample and not the population, it is best to rerun this test to see if a true impact is present.
